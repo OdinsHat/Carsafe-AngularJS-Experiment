@@ -1,0 +1,85 @@
+<!doctype html>
+<html ng-app="carSafety">
+    <head>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.js"></script>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="description" content="Personal website of Doug Bromley - Web Developer">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tin Top Hat - Doug Bromley</title>
+        <!-- Add to homescreen for Chrome on Android -->
+        <meta name="mobile-web-app-capable" content="yes">
+        <link rel="icon" sizes="196x196" href="images/touch/chrome-touch-icon-196x196.png">
+        <!-- Add to homescreen for Safari on iOS -->
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
+        <!-- Tile icon for Win8 (144x144 + tile color) -->
+        <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+        <meta name="msapplication-TileColor" content="#3372DF">
+        <!-- build:css styles/components/main.min.css -->
+        <link rel="stylesheet" href="styles/h5bp.css">
+        <link rel="stylesheet" href="styles/components/components.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+    </head>
+    <body>
+        <header class="app-bar promote-layer">
+            <div class="app-bar-container">
+                <button class="menu"><img src="images/hamburger.svg" alt="Menu"></button>
+                <h1 class="logo">Tin Top Hat</h1>
+                <section class="app-bar-actions">
+
+                </section>
+            </div>
+        </header>
+        <nav class="navdrawer-container promote-layer">
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="/">Return to Main Site</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section>
+                <h2>Car Safety Check (Angular JS Experiment)</h2>
+                <h3></h3>
+                <div class="clear">
+                    <form name="CarSafetyForm" ng-controller="SafetyController as safetyCtrl">
+                        <div class="g--third">
+                            <h3>Year: {{ safetyCtrl.year }}</h3>
+                            <select ng-model="safetyCtrl.year" class="form-control" ng-options="years for years in safetyCtrl.years" ng-click="safetyCtrl.setCurrenYear(safetyCtrl.year)">
+                                <options value="">Choose Year</option>
+                            </select>
+                        </div>
+                        <div class="g--third">
+                            <h3>Make: {{ safetyCtrl.make }}</h3>
+                            <select ng-model="safetyCtrl.make" class="form-control" ng-options="makes for meakes in safetyCtrl.makes">
+                                <options value="">Choose Make</option>
+                            </select>
+                        </div>
+                        <div class="g--third g--last">
+                            <h3>Model: {{ safetyCtrl.make }}</h3>
+                            <select ng-model="safetyCtrl.make" class="form-control" ng-options="models for models in safetyCtrl.models">
+                                <options value="">Choose Model</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <!-- build:js scripts/main.min.js -->
+        <script src="scripts/main.js"></script>
+        <!-- endbuild -->
+
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            ga('create', 'UA-123311-44', 'auto');
+            ga('require', 'displayfeatures');
+            ga('send', 'pageview');
+        </script>
+        <script src="scripts/app.js"></script>
+        </body>
+    </html>

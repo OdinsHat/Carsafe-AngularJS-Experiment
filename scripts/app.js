@@ -22,7 +22,7 @@
          */
         this.setCurrentYear = function(year) {
             this.currentYear = year || 0;
-            console.log('FUCK');
+            console.log('Inside year');
             if (this.currentYear > 0) {
                 $http.jsonp(this.apiUrl + '/modelyear/' + year + '/').sucess(function(data){
                     console.log(data.Results)
